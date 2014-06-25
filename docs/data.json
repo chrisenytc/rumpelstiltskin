@@ -2,7 +2,7 @@
     "project": {
         "name": "Rumpelstiltskin API",
         "description": "Rumpelstiltskin API: The powerful framework for making awesome apis with node.js",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "url": "https://github.com/chrisenytc/rumpelstiltskin"
     },
     "files": {
@@ -310,7 +310,7 @@
         },
         {
             "file": "lib/core/rumpelstiltskin.js",
-            "line": 595,
+            "line": 596,
             "description": "Method responsible for load socket extensions",
             "example": [
                 "\n\n    rumpelstiltskin.loadSocketExtensions(io, function(){});"
@@ -335,7 +335,7 @@
         },
         {
             "file": "lib/core/rumpelstiltskin.js",
-            "line": 626,
+            "line": 627,
             "description": "Method responsible for load extensions",
             "example": [
                 "\n\n    rumpelstiltskin.loadExtensions(App, function(){});"
