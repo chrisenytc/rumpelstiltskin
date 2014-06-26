@@ -19,7 +19,7 @@
             
         </div>
         <div class="yui3-u-1-4 version">
-            <em>API Docs for: 0.1.1</em>
+            <em>API Docs for: 0.1.2</em>
         </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -301,6 +301,12 @@ Rumpelstiltskin.prototype.configureServer = function configureServer() {
 
     App.set(&#x27;showStackError&#x27;, true);
 
+    //ResponseTime
+    App.use(responseTime());
+
+    //Compress
+    App.use(compression());
+
     //Headers
     App.use(bodyParser());
     App.use(methodOverride());
@@ -329,12 +335,6 @@ Rumpelstiltskin.prototype.configureServer = function configureServer() {
     this.loadMiddlewares(App, function () {
         debug(&#x27;Middlewares loaded&#x27;, &#x27;success&#x27;);
     });
-
-    //Compress
-    App.use(compression());
-
-    //ResponseTime
-    App.use(responseTime());
 
     //Loader webservices
     if (configStorage.app.webservices) {

@@ -2,7 +2,7 @@
     "project": {
         "name": "Rumpelstiltskin API",
         "description": "Rumpelstiltskin API: The powerful framework for making awesome apis with node.js",
-        "version": "0.1.1",
+        "version": "0.1.2",
         "url": "https://github.com/chrisenytc/rumpelstiltskin"
     },
     "files": {
