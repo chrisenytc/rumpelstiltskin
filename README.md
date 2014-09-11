@@ -2,7 +2,7 @@
 
 > The powerful framework for making awesome apis with node.js
 
-[![Build Status](https://secure.travis-ci.org/chrisenytc/rumpelstiltskin.png?branch=master)](http://travis-ci.org/chrisenytc/rumpelstiltskin) [![GH version](https://badge-me.herokuapp.com/app/gh/chrisenytc/rumpelstiltskin.png)](http://badges.enytc.com/for/gh/chrisenytc/rumpelstiltskin)
+[![Build Status](https://secure.travis-ci.org/chrisenytc/rumpelstiltskin.png?branch=master)](http://travis-ci.org/chrisenytc/rumpelstiltskin) [![GH version](https://badge-me.herokuapp.com/api/gh/chrisenytc/rumpelstiltskin.png)](http://badges.enytc.com/for/gh/chrisenytc/rumpelstiltskin)
 
 ## Getting Started
 
