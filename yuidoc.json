@@ -1,7 +1,7 @@
 {
     "name": "Rumpelstiltskin API",
     "description": "Rumpelstiltskin API: The powerful framework for making awesome apis with node.js",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "url": "https://github.com/chrisenytc/rumpelstiltskin",
     "options": {
         "outdir": "./docs",
