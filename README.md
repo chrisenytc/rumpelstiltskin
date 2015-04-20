@@ -25,13 +25,7 @@ npm install
 
 4º Configure the settings in `api/config`
 
-5º Build Rumpelstiltskin
-
-```bash
-make build
-```
-
-6º Start Rumpelstiltskin
+5º Start Rumpelstiltskin
 
 ```bash
 npm start
@@ -204,50 +198,46 @@ module.exports = function utilsService() {
 
 ### Models
 
-The models in Carolyne.js uses the mongoose and follows the implementation of the example below:
+The models in Rumpelstiltskin.js uses the waterline and follows the implementation of the example below:
 
 How to create Models
 
 Example:
 
 ```javascript
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
 
-/**
- * Taks Schema
- */
-var TaskSchema = new Schema({
-  created: {
-    type: Date,
-    default: Date.now
-  },
-  title: {
-    type: String,
-    default: '',
-    trim: true,
-    required: true
-  },
-  slug: {
-    type: String,
-    trim: true,
-    required: true,
-    unique: true
-  },
-  content: {
-    type: String,
-    default: '',
-    trim: true
-  },
-  closed: {
-    type: Boolean,
-    default: false
-  }
-});
+module.exports = {
+    tableName: 'users',
 
-//Exports model
-module.exports = mongoose.model('Task', TaskSchema);
+    attributes: {
+        name: {
+            type: 'string',
+            required: true,
+            minLength: 3
+        },
+
+        username: {
+            type: 'string',
+            unique: true,
+            required: true,
+            alphanumeric: true
+        },
+
+        email: {
+            type: 'string',
+            unique: true,
+            required: true,
+            email: true
+        },
+
+        password: {
+            type: 'string',
+            required: true
+        }
+    }
+};
 ```
+More details in [Waterline documentation](https://github.com/balderdashy/waterline)
 
 ### Middlewares
 
@@ -398,7 +388,7 @@ If you have any problem or suggestion please open an issue [here](https://github
 
 The MIT License
 
-Copyright (c) 2014, Christopher EnyTC
+Copyright (c) 2015, Christopher EnyTC
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation

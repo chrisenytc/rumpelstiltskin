@@ -1,43 +1,36 @@
 'use strict';
 
 /*
- * Module Dependencies
- */
-
-var mongoose = require('mongoose'),
-    timestamps = require('mongoose-timestamp'),
-    Schema = mongoose.Schema;
-
-/*
  * User Schema
  */
-var UserSchema = new Schema({
 
-    email: {
-        type: String,
-        trim: true,
-        unique: true,
-        require: true
-    },
+module.exports = {
+    tableName: 'users',
 
-    username: {
-        type: String,
-        trim: true,
-        unique: true,
-        require: true
-    },
+    attributes: {
+        name: {
+            type: 'string',
+            required: true,
+            minLength: 3
+        },
 
-    password: {
-        type: String,
-        require: true
+        username: {
+            type: 'string',
+            unique: true,
+            required: true,
+            alphanumeric: true
+        },
+
+        email: {
+            type: 'string',
+            unique: true,
+            required: true,
+            email: true
+        },
+
+        password: {
+            type: 'string',
+            required: true
+        }
     }
-
-});
-
-/*
- * Plugins
- */
-UserSchema.plugin(timestamps);
-
-//Exports model
-module.exports = mongoose.model('User', UserSchema);
+};

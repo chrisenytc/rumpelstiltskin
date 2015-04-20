@@ -1,7 +1,7 @@
 {
     "name": "rumpelstiltskin",
     "description": "The powerful framework for making awesome apis with node.js",
-    "version": "0.1.4",
+    "version": "0.2.0",
     "private": true,
     "homepage": "https://github.com/chrisenytc/rumpelstiltskin",
     "author": {
@@ -25,28 +25,28 @@
         "npm": ">=1.4.3"
     },
     "scripts": {
-        "start": "./node_modules/pm2/bin/pm2 start app.js --name rumpelstiltskin",
+        "start": "./node_modules/forever/bin/forever -m 8 --minUptime 1000ms --spinSleepTime 1000ms app.js",
         "test": "make test"
     },
     "dependencies": {
-        "express": "~3.4.7",
         "body-parser": "~1.0.2",
-        "method-override": "~1.0.0",
-        "morgan": "~1.0.0",
+        "colors": "~0.6.2",
         "compression": "1.0.1",
-        "response-time": "~1.0.0",
         "cors": "~2.1.1",
-        "socket.io": "~1.0.3",
-        "mongoose": "~3.8.7",
-        "mongoose-timestamp": "~0.2.0",
-        "mongoose-validator": "~0.2.2",
+        "express": "~3.4.7",
+        "forever": "~0.14.1",
+        "method-override": "~1.0.0",
+        "moment": "~2.6.0",
+        "morgan": "~1.0.0",
         "nodemailer": "~0.6.1",
+        "prettyjson": "~0.11.1",
+        "response-time": "~1.0.0",
+        "sails-disk": "^0.10.7",
+        "sails-mongo": "^0.10.6",
+        "socket.io": "~1.0.3",
         "underscore": "~1.6.0",
         "underscore.string": "~2.3.3",
-        "moment": "~2.6.0",
-        "colors": "~0.6.2",
-        "prettyjson": "~0.11.1",
-        "pm2": "~0.8.15"
+        "waterline": "~0.10.21"
     },
     "devDependencies": {
         "mocha": "~1.10.0",

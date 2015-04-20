@@ -1,3 +1,7 @@
+v0.2.0:
+  date: 2014-4-19
+  changes:
+    - Add support for waterline
 v0.1.4:
   date: 2014-9-11
   changes:
