@@ -34,7 +34,7 @@ module.exports = {
         //API response
         res.sendResponse = function(statusCode, payload) {
             if (!payload) {
-                return this.jsonp(200, {
+                return this.status(200).jsonp({
                     metadata: {
                         status: 200,
                         msg: statusMsg(200)
@@ -42,7 +42,7 @@ module.exports = {
                     response: statusCode
                 });
             }
-            return this.jsonp(statusCode, {
+            return this.status(statusCode).jsonp({
                 metadata: {
                     status: statusCode,
                     msg: statusMsg(statusCode)

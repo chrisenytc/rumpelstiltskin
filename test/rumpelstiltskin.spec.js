@@ -7,7 +7,7 @@ chai.should();
 var Rumpelstiltskin = require('../lib/core/rumpelstiltskin.js'),
     rumpelstiltskin = new Rumpelstiltskin();
 
-describe('rumpelstiltskin module', function() {
+describe('Rumpelstiltskin module', function() {
 
     describe('#constructor()', function() {
 
@@ -19,6 +19,19 @@ describe('rumpelstiltskin module', function() {
     });
 
     describe('#instance()', function() {
+
+        it('should be a object', function() {
+
+            rumpelstiltskin.should.be.a('object');
+            
+        });
+    });
+
+	describe('#getConfig()', function() {
+
+		before(function(done) {
+			rumpelstiltskin.loadConfigs();
+		});
 
         it('should be a object', function() {
 

@@ -1,66 +1,70 @@
 {
-    "name": "rumpelstiltskin",
-    "description": "The powerful framework for making awesome apis with node.js",
-    "version": "0.2.0",
-    "private": true,
-    "homepage": "https://github.com/chrisenytc/rumpelstiltskin",
-    "author": {
-        "name": "Christopher EnyTC",
-        "email": "chrisenytc@gmail.com"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/chrisenytc/rumpelstiltskin.git"
-    },
-    "bugs": {
-        "url": "https://github.com/chrisenytc/rumpelstiltskin/issues"
-    },
-    "licenses": [{
-        "type": "MIT",
-        "url": "https://github.com/chrisenytc/rumpelstiltskin/blob/master/LICENSE"
-    }],
-    "main": "app.js",
-    "engines": {
-        "node": ">= 0.10.26",
-        "npm": ">=1.4.3"
-    },
-    "scripts": {
-        "start": "./node_modules/forever/bin/forever -m 8 --minUptime 1000ms --spinSleepTime 1000ms app.js",
-        "test": "make test"
-    },
-    "dependencies": {
-        "body-parser": "~1.0.2",
-        "colors": "~0.6.2",
-        "compression": "1.0.1",
-        "cors": "~2.1.1",
-        "express": "~3.4.7",
-        "forever": "~0.14.1",
-        "method-override": "~1.0.0",
-        "moment": "~2.6.0",
-        "morgan": "~1.0.0",
-        "nodemailer": "~0.6.1",
-        "prettyjson": "~0.11.1",
-        "response-time": "~1.0.0",
-        "sails-disk": "^0.10.7",
-        "sails-mongo": "^0.10.6",
-        "socket.io": "~1.0.3",
-        "underscore": "~1.6.0",
-        "underscore.string": "~2.3.3",
-        "waterline": "~0.10.21"
-    },
-    "devDependencies": {
-        "mocha": "~1.10.0",
-        "chai": "~1.8.0"
-    },
-    "keywords": [
-        "api",
-        "websockets",
-        "restful",
-        "framework",
-        "stack",
-        "modular",
-        "socket.io",
-        "mongodb",
-        "mongoose"
-    ]
+  "name": "rumpelstiltskin",
+  "description": "The powerful framework for making awesome apis with node.js",
+  "version": "0.3.0",
+  "private": true,
+  "homepage": "https://github.com/chrisenytc/rumpelstiltskin",
+  "author": {
+    "name": "Christopher EnyTC",
+    "email": "chrisenytc@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chrisenytc/rumpelstiltskin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chrisenytc/rumpelstiltskin/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/chrisenytc/rumpelstiltskin/blob/master/LICENSE"
+    }
+  ],
+  "main": "app.js",
+  "engines": {
+    "node": ">= 0.11.14",
+    "npm": ">=2.0.0"
+  },
+  "scripts": {
+    "start": "./node_modules/forever/bin/forever -m 8 --minUptime 1000ms --spinSleepTime 1000ms app.js",
+    "test": "make test"
+  },
+  "dependencies": {
+    "body-parser": "~1.13.1",
+    "colors": "~0.6.2",
+    "compression": "1.5.0",
+    "cors": "~2.7.1",
+    "express": "~4.13.0",
+    "forever": "~0.14.1",
+    "method-override": "~2.3.3",
+    "moment": "~2.10.3",
+    "morgan": "~1.6.0",
+    "nodemailer": "~0.6.1",
+    "prettyjson": "~1.1.2",
+    "response-time": "~2.3.1",
+    "sails-disk": "~0.10.8",
+    "sails-mongo": "~0.11.2",
+    "socket.io": "~1.3.5",
+    "lodash": "~3.9.3",
+    "waterline": "~0.10.23"
+  },
+  "devDependencies": {
+    "chai": "~3.0.0",
+    "coveralls": "~2.11.2",
+    "istanbul": "~0.3.13",
+    "mocha": "^2.2.5",
+    "serve": "^1.4.0"
+  },
+  "keywords": [
+    "api",
+    "websockets",
+    "restful",
+    "framework",
+    "stack",
+    "modular",
+    "socket.io",
+    "mongodb",
+    "mongoose"
+  ]
 }

@@ -7,6 +7,12 @@
 #
 
 test:
-	@NODE_ENV=test ./node_modules/mocha/bin/mocha -G -R spec -u bdd -t 6000 --colors
+	@NODE_ENV=test node ./node_modules/.bin/istanbul cover --root ./lib/core -x ./lib/core/debugger.js ./node_modules/mocha/bin/_mocha -- -R spec -u bdd -t 6000 --colors ./test/**/*.spec.js
+
+view-coverage:
+	./node_modules/.bin/serve ./coverage/lcov-report
+
+docs:
+	yuidoc ./
 
 .PHONY: test
